@@ -1,0 +1,45 @@
+variable "resource_group_name" {
+  description = <<EOT
+The name of the resource group in which to create the ACR.
+The Resource Group must already exist.
+EOT
+  type        = string
+}
+
+variable "name" {
+  description = <<EOT
+Specifies the name of the Container Registry.
+Changing this forces a new resource to be created.
+EOT
+  type        = string
+}
+
+variable "tags" {
+  description = "A mapping of tags which should be assigned to Resources."
+  type        = map(string)
+  default     = {}
+}
+
+variable "sku" {
+  description = <<EOT
+The SKU name of the container registry.
+Possible values are Basic, Standard and Premium.
+EOT
+  type        = string
+  default     = "Premium"
+}
+
+variable "admin_enabled" {
+  description = "Specifies whether the admin user is enabled."
+  type        = bool
+  default     = true
+}
+
+variable "georeplication_locations" {
+  description = <<EOT
+A list of Azure locations where the container registry should be geo-replicated
+(sku must be Premium).
+EOT
+  type        = list(string)
+  default     = []
+}
