@@ -12,6 +12,11 @@ Specifies the name of the Container Registry.
 Changing this forces a new resource to be created.
 EOT
   type        = string
+
+  validation {
+    condition     = length(var.name) >= 5 && length(var.name) <= 50 && can(regex("^[a-zA-Z0-9]+$", var.name))
+    error_message = "Invalid Container registry name (must be alphanumeric and between 5 and 50 characters)."
+  }
 }
 
 variable "tags" {

@@ -1,6 +1,8 @@
 # terraform-azurerm-acr
 
-Terraform module for AzureRM ACR
+Terraform module for AzureRM ACR.
+
+This module validates the name according to Azure resource naming restrictions.
 
 ## Usage
 
@@ -9,12 +11,11 @@ Terraform module for AzureRM ACR
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.20 |
+| terraform | >= 0.13.0 |
 | azurerm | >= 2.41.0 |
 
 ## Providers
@@ -66,3 +67,6 @@ go test -v
 ```
 
 ## References
+
+* [Azure resource naming restrictions](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
+* [Terraform azurerm_container_registry](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/container_registry)
