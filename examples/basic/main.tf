@@ -18,4 +18,6 @@ module "acr" {
 
   sku           = "Basic"
   admin_enabled = false
+
+  depends_on = [module.rg]
 }

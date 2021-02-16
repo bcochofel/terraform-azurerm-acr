@@ -19,4 +19,6 @@ module "acr" {
   sku                      = "Premium"
   admin_enabled            = true
   georeplication_locations = ["West Europe"]
+
+  depends_on = [module.rg]
 }
