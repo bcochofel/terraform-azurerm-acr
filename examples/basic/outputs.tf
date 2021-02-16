@@ -6,10 +6,6 @@ output "id" {
   value = module.acr.id
 }
 
-output "fqdn" {
-  value = module.acr.fqdn
-}
-
 output "login_server" {
   value = module.acr.login_server
 }

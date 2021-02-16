@@ -8,11 +8,6 @@ output "rg_name" {
   value       = data.azurerm_resource_group.rg.name
 }
 
-output "fqdn" {
-  description = "ACR resource FQDN."
-  value       = "${azurerm_container_registry.acr.name}.azurecr.io"
-}
-
 output "id" {
   description = "ACR resource ID."
   value       = azurerm_container_registry.acr.id

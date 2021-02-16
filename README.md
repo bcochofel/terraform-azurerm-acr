@@ -11,7 +11,6 @@ This module validates the name according to Azure resource naming restrictions.
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-
 ## Requirements
 
 | Name | Version |
@@ -53,7 +52,6 @@ No Modules.
 |------|-------------|
 | admin\_password | The Password associated with the Container Registry Admin<br>account - if the admin account is enabled. |
 | admin\_username | The Username associated with the Container Registry Admin<br>account - if the admin account is enabled. |
-| fqdn | ACR resource FQDN. |
 | id | ACR resource ID. |
 | login\_server | The URL that can be used to log into the container registry. |
 | name | ACR resource name. |
