@@ -11,6 +11,7 @@ This module validates the name according to Azure resource naming restrictions.
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name | Version |
@@ -58,6 +59,7 @@ No Modules.
 | name | ACR resource name. |
 | rg\_name | Resource Group name. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 
 ## Run tests
 
