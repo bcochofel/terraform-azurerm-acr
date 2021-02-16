@@ -6,8 +6,12 @@
 <a name="0.2.0"></a>
 ## [0.2.0] - 2021-02-16
 ### Feat
+- added examples and minor tests
 - acr name validation
 - first release
+
+### Fix
+- rg dependency for examples
 
 
 <a name="0.1.0"></a>
