@@ -5,9 +5,11 @@ Terraform module for AzureRM ACR
 ## Usage
 
 ```hcl:examples/basic/main.tf
+
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name | Version |
@@ -55,6 +57,7 @@ No Modules.
 | name | ACR resource name. |
 | rg\_name | Resource Group name. |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Run tests
 
 ```bash
