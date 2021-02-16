@@ -11,6 +11,7 @@
 - first release
 
 ### Fix
+- clean outputs
 - rg dependency for examples
 
 
