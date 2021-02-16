@@ -6,16 +6,17 @@ module "rg" {
   source  = "bcochofel/resource-group/azurerm"
   version = "1.2.0"
 
-  name     = "rg-acr-basic-example"
+  name     = "rg-acr-premium-example"
   location = "North Europe"
 }
 
 module "acr" {
   source = "../.."
 
-  name                = "acrbasicexample"
+  name                = "acrpremiumexample"
   resource_group_name = module.rg.name
 
-  sku           = "Basic"
-  admin_enabled = false
+  sku                      = "Premium"
+  admin_enabled            = true
+  georeplication_locations = ["West Europe"]
 }
