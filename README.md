@@ -12,7 +12,7 @@ provider "azurerm" {
 
 module "rg" {
   source  = "bcochofel/resource-group/azurerm"
-  version = "1.2.0"
+  version = "1.4.0"
 
   name     = "rg-acr-basic-example"
   location = "North Europe"
@@ -33,6 +33,7 @@ module "acr" {
 ```
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+
 ## Requirements
 
 | Name | Version |
