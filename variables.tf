@@ -15,7 +15,7 @@ EOT
 
   validation {
     condition     = length(var.name) >= 5 && length(var.name) <= 50 && can(regex("^[a-zA-Z0-9]+$", var.name))
-    error_message = "Invalid Container registry name (must be alphanumeric and between 5 and 50 characters)."
+    error_message = "Invalid name (check Azure Resource naming restrictions for more info)."
   }
 }
 
