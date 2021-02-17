@@ -1,7 +1,6 @@
 # terraform-azurerm-acr
 
 Terraform module for AzureRM ACR.
-
 This module validates the name according to Azure resource naming restrictions.
 
 ## Usage
