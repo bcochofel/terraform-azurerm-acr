@@ -14,7 +14,7 @@ resource "azurerm_container_registry" "acr" {
     for_each = var.georeplications == null && var.sku == "Premium" ? [] : ["georeplications"]
     iterator = item
     content {
-      location = item.location
+      location = item.georeplications.location
       #zone_redundancy_enabled   = each.value.georeplications.zone_redundancy_enabled
       #regional_endpoint_enabled = each.value.georeplications.regional_endpoint_enabled
       #tags                      = each.value.georeplications.tags
