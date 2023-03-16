@@ -47,6 +47,7 @@ variable "georeplications" {
     regional_endpoint_enabled = optional(bool)
     tags                      = optional(map(string))
   }))
+  default = []
 }
 
 
