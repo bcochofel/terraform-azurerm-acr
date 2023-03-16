@@ -16,9 +16,7 @@ resource "azurerm_container_registry" "acr" {
       zone_redundancy_enabled = georeplications.zone_redundancy_enabled
       tags                    = georeplications.tags
     }
-
   }
-  georeplications = var.georeplications
 
   tags = var.tags
 }
