@@ -20,7 +20,6 @@ module "acr" {
   georeplications = {
     location                = "West Europe"
     zone_redundancy_enabled = true
-    tags                    = {}
   }
   depends_on = [module.rg]
 }
