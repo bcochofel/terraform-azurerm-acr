@@ -8,7 +8,17 @@ resource "azurerm_container_registry" "acr" {
   location            = data.azurerm_resource_group.rg.location
   sku                 = var.sku
   admin_enabled       = var.admin_enabled
-  georeplications     = var.georeplications
+
+  dynamic "georeplications" {
+    for_each = var.georeplications
+    content {
+      location                = georeplications.location
+      zone_redundancy_enabled = georeplications.zone_redundancy_enabled
+      tags                    = georeplications.tags
+    }
+
+  }
+  georeplications = var.georeplications
 
   tags = var.tags
 }
