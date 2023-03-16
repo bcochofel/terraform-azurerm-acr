@@ -42,9 +42,10 @@ variable "admin_enabled" {
 
 variable "georeplications" {
   type = list(object({
-    location                = string
-    zone_redundancy_enabled = string
-    #tags                    = list(object)
+    location                  = string
+    zone_redundancy_enabled   = optional(string)
+    regional_endpoint_enabled = optional(bool)
+    tags                      = optional(map(string))
   }))
 }
 
