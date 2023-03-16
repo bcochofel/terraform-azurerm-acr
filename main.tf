@@ -10,16 +10,16 @@ resource "azurerm_container_registry" "acr" {
   admin_enabled       = var.admin_enabled
 
   dynamic "georeplications" {
-    #for_each = var.georeplications
-    for_each = each.value.georeplications == null ? [] : ["georeplications"]
+    for_each = var.georeplications
 
     content {
-      location                  = eachs.value.location
-      zone_redundancy_enabled   = eachs.value.zone_redundancy_enabled
-      regional_endpoint_enabled = eachs.value.regional_endpoint_enabled
-      tags                      = eachs.value.tags
+      location                  = georeplications.value.location
+      zone_redundancy_enabled   = georeplications.value.zone_redundancy_enabled
+      regional_endpoint_enabled = georeplications.value.regional_endpoint_enabled
+      tags                      = georeplications.value.tags
     }
   }
+
 
   tags = var.tags
 }
