@@ -3,6 +3,10 @@
 Terraform module for AzureRM ACR.
 This module validates the name according to Azure resource naming restrictions.
 
+
+Releases
+ - 1.0.0
+
 ## Usage
 
 ```hcl:examples/basic/main.tf
