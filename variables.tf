@@ -44,7 +44,7 @@ variable "georeplications" {
   type = list(object({
     location                = string
     zone_redundancy_enabled = string
-    tags                    = list(object)
+    #tags                    = list(object)
   }))
 }
 
