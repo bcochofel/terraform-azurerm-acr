@@ -19,7 +19,7 @@ resource "azurerm_container_registry" "acr" {
     #      #tags                      = each.value.georeplications.tags
     #    }
 
-    for_each = var.georeplications == null && var.sku != "Premium" ? [] : var.georeplications
+    for_each = (var.georeplications != null && var.sku == "Premium") ? var.georeplications : []
     content {
       location = georeplications.value["location"]
     }
