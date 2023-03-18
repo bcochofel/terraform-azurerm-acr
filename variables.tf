@@ -40,11 +40,18 @@ variable "admin_enabled" {
   default     = true
 }
 
-variable "georeplication_locations" {
+variable "georeplications" {
   description = <<EOT
 A list of Azure locations where the container registry should be geo-replicated
 (sku must be Premium).
 EOT
-  type        = list(string)
-  default     = []
+  type = list(object({
+    location                  = string
+    zone_redundancy_enabled   = optional(bool)
+    regional_endpoint_enabled = optional(bool)
+    tags                      = optional(map(string))
+  }))
+  default = []
 }
+
+

@@ -15,10 +15,20 @@ module "acr" {
 
   name                = "acrpremiumexample"
   resource_group_name = module.rg.name
-
-  sku                      = "Premium"
-  admin_enabled            = true
-  georeplication_locations = ["West Europe"]
+  sku                 = "Premium"
+  admin_enabled       = true
+  georeplications = [
+    {
+      location                = "West Europe"
+      zone_redundancy_enabled = true
+      tags                    = { "loc" : "west" }
+    },
+    {
+      location                = "North Europe"
+      zone_redundancy_enabled = true
+      tags                    = { "foo" : "bar" }
+    },
+  ]
 
   depends_on = [module.rg]
 }
